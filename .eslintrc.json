@@ -18,13 +18,14 @@
         "sourceType": "module"
     },
     "plugins": [
-        "react", 
-        "react-hooks", 
-        "@typescript-eslint", 
+        "react",
+        "react-hooks",
+        "@typescript-eslint",
         "prettier"
     ],
     "rules": {
-        "import/no-unresolved": "error",
+        "no-use-before-define": ["warn", { "variables": false }],
+        "no-console": 2,
         "prettier/prettier": "error",
         "react/jsx-one-expression-per-line": "off",
         "react/jsx-props-no-spreading": "off",
@@ -34,6 +35,7 @@
         "no-unused-expressions": "off",
         "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
         "import/prefer-default-export": "off",
+        "import/no-unresolved": "error",
         "import/no-duplicates": "off",
         "@typescript-eslint/camelcase": "off",
         "@typescript-eslint/explicit-function-return-type": [
@@ -41,7 +43,17 @@
           {
             "allowExpressions": true
           }
-        ]
+        ],
+        "import/extensions": [
+          "error",
+          "ignorePackages",
+          {
+            "js": "never",
+            "jsx": "never",
+            "ts": "never",
+            "tsx": "never"
+          }
+       ]
     },
     "settings": {
         "import/resolver": {
