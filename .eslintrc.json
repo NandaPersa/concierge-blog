@@ -24,7 +24,7 @@
         "prettier"
     ],
     "rules": {
-        "no-use-before-define": ["warn", { "variables": false }],
+        "no-use-before-define": ["off", { "variables": false }],
         "no-console": 2,
         "prettier/prettier": "error",
         "react/jsx-one-expression-per-line": "off",
