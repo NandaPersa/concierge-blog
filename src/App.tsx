@@ -1,15 +1,15 @@
 import React from "react";
-import "./App.css";
+import { ThemeProvider } from "styled-components";
+import Principal from "./pages/Principal";
+import { GlobalStyle } from "./Styles/Global";
+import theme from "./Styles/theme";
 
 const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Welcome to <code>Concierge Blog</code> in React.
-        </p>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <Principal />
+      <GlobalStyle />
+    </ThemeProvider>
   );
 };
 
