@@ -11,6 +11,11 @@ export const Container = styled.div`
   justify-content: space-between;
 
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+
+  @media screen and (max-width: 600px) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 `;
 
 export const LogoContainer = styled.img`
@@ -34,5 +39,17 @@ export const SearchContainer = styled.div`
     height: 34px;
     width: 190px;
     border: none;
+  }
+
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
+`;
+
+export const MenuMobile = styled.img`
+  display: none;
+
+  @media screen and (max-width: 600px) {
+    display: flex;
   }
 `;
