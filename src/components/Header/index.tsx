@@ -8,6 +8,7 @@ const Header: React.FC = () => {
   return (
     <Container>
       <LogoContainer src={logoImg} />
+      <p> teste de commit </p>
       <SearchContainer>
         <input type="text" id="search" placeholder="Buscar" />
         <img src={iconSearch} alt="lupa" />
