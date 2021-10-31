@@ -6,7 +6,7 @@ export async function getNPost(
   type: string
 ): Promise<RequestData> {
   try {
-    const data: Post[] | any = await api.get(`posts/latest/${qtd}/${type}`);
+    const { data }: Post[] | any = await api.get(`posts/latest/${qtd}/${type}`);
 
     if (data.lenght === 0) {
       return {

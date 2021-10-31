@@ -3,6 +3,8 @@ import Carousel from "@brainhubeu/react-carousel";
 import "@brainhubeu/react-carousel/lib/style.css";
 import { getNPost } from "../../services/RequestPosts";
 import { Post } from "../../services/RequestPosts/types";
+import CorroselImages from "../CorroselImages";
+import { WrapperCarrossel } from "./styles";
 
 const Carrossel: React.FC = () => {
   const [posts, setPosts] = useState<Array<Post>>();
@@ -26,11 +28,20 @@ const Carrossel: React.FC = () => {
 
   return (
     <>
-      {posts && (
-        <Carousel plugins={["arrows"]}>
-          {posts && posts.map((item: Post) => <img src={item.image} alt="" />)}
-        </Carousel>
-      )}
+      <WrapperCarrossel>
+        {posts && (
+          <>
+            <Carousel plugins={["arrows"]}>
+              {posts &&
+                posts.map((item: Post) => (
+                  <>
+                    <CorroselImages img={item.image} alt={item.title} />
+                  </>
+                ))}
+            </Carousel>
+          </>
+        )}
+      </WrapperCarrossel>
     </>
   );
 };
