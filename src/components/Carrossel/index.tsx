@@ -4,7 +4,7 @@ import "@brainhubeu/react-carousel/lib/style.css";
 import { getNPost } from "../../services/RequestPosts";
 import { Post } from "../../services/RequestPosts/types";
 import CorroselImages from "../CorroselImages";
-import { WrapperCarrossel } from "./styles";
+import { Container, ContainerText, WrapperCarrossel } from "./styles";
 
 const Carrossel: React.FC = () => {
   const [posts, setPosts] = useState<Array<Post>>();
@@ -28,20 +28,34 @@ const Carrossel: React.FC = () => {
 
   return (
     <>
-      <WrapperCarrossel>
-        {posts && (
-          <>
-            <Carousel plugins={["arrows"]}>
-              {posts &&
-                posts.map((item: Post) => (
-                  <>
-                    <CorroselImages img={item.image} alt={item.title} />
-                  </>
-                ))}
-            </Carousel>
-          </>
-        )}
-      </WrapperCarrossel>
+      <Container>
+        <WrapperCarrossel>
+          {posts && (
+            <>
+              <Carousel>
+                {posts &&
+                  posts.map((item: Post) => (
+                    <>
+                      <CorroselImages
+                        img={item.image}
+                        alt={item.title}
+                        author={item.author.name}
+                        imageAuthor={item.author.image}
+                      />
+                    </>
+                  ))}
+              </Carousel>
+            </>
+          )}
+        </WrapperCarrossel>
+        <ContainerText>
+          <h1>Title do post: bem bonito e chamativo</h1>
+          <p>
+            Um lindo resumo simplificado para o post. Pois precisamos de
+            resuminhos aqui né.
+          </p>
+        </ContainerText>
+      </Container>
     </>
   );
 };

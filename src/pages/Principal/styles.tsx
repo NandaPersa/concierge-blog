@@ -7,6 +7,7 @@ export const Container = styled.div`
 export const ContainerSlider = styled.div`
   width: 650px;
   margin-left: 62px;
+  margin-right: 0;
   display: flex;
   align-items: center;
   justify-content: center;
