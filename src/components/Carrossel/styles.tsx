@@ -13,7 +13,7 @@ export const WrapperCarrossel = styled.div`
 
 export const ContainerText = styled.div`
   width: 100%;
-  margin-top: 40px;
+  margin-top: 15px;
 
   h1 {
     font-size: 38px;

@@ -6,6 +6,7 @@ export async function getNPost(
   type: string
 ): Promise<RequestData> {
   try {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const { data }: Post[] | any = await api.get(`posts/latest/${qtd}/${type}`);
 
     if (data.lenght === 0) {

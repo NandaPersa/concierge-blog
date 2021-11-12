@@ -23,16 +23,6 @@ const Carrossel: React.FC = () => {
     return [];
   };
 
-  const onChange = (values: number): void => {
-    if (posts) {
-      if (values > posts?.length - 2) {
-        setValue(0);
-      } else {
-        setValue(values);
-      }
-    }
-  };
-
   useEffect(() => {
     getPostsCarrossel();
   }, []);
@@ -45,8 +35,6 @@ const Carrossel: React.FC = () => {
         setTimeout(() => setValue(value + 1), 2000);
       }
     }
-    // eslint-disable-next-line no-console
-    console.log(value);
   }, [value, posts]);
 
   return (
@@ -64,6 +52,9 @@ const Carrossel: React.FC = () => {
                         alt={item.title}
                         author={item.author.name}
                         imageAuthor={item.author.image}
+                        category={item.categories[0].title}
+                        active={value}
+                        quantity={posts.length - 1}
                       />
                     </>
                   ))}

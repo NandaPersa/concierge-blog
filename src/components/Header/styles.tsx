@@ -9,7 +9,7 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 55px;
+  margin-bottom: 50px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 `;
 

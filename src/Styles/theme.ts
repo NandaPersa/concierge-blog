@@ -28,6 +28,14 @@ const theme = {
     green: {
       main: color("#25B900"),
     },
+    categories: {
+      frontend: color("#F21B6A"),
+      backend: color("#25B900"),
+      mobile: color("#5F4BB6"),
+      fullstack: color("#0046FB"),
+      qa: color("#FF9900"),
+      devops: color("#48D1CC"),
+    },
   },
 };
 type Theme = typeof theme;
