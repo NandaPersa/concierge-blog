@@ -16,14 +16,14 @@ export const ContainerText = styled.div`
   margin-top: 15px;
 
   h1 {
-    font-size: 38px;
+    font-size: 28px;
     font-family: ${({ theme }) => theme.fonts.familys.first};
     color: ${({ theme }) => theme.palette.titles.main.hex()};
     font-weight: 700;
   }
 
   p {
-    font-size: 18px;
+    font-size: 14px;
     font-family: ${({ theme }) => theme.fonts.familys.first};
     color: ${({ theme }) => theme.palette.texts.main.hex()};
     font-weight: 400;
