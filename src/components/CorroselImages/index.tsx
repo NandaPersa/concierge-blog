@@ -23,7 +23,7 @@ const CorroselImages = ({
   const circles = [];
 
   for (let i = 0; i < quantity; i += 1) {
-    circles.push(<Circle active={i === active} />);
+    circles.push(<Circle key={`dot${i}`} active={i === active} />);
   }
 
   return (
