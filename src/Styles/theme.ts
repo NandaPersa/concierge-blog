@@ -4,8 +4,8 @@ import color from "color";
 const theme = {
   fonts: {
     familys: {
-      _1: "Poppins",
-      _2: "Tauri",
+      first: "Poppins",
+      secund: "Tauri",
       _3: "sans-serif",
     },
   },
