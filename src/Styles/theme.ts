@@ -4,17 +4,17 @@ import color from "color";
 const theme = {
   fonts: {
     familys: {
-      _1: "Poppins",
-      _2: "Tauri",
-      _3: "sans-serif",
+      first: "Poppins",
+      second: "Tauri",
+      sans: "sans-serif",
     },
   },
   palette: {
     texts: {
-      _300: color("#555555"),
+      main: color("#555555"),
     },
     titles: {
-      _400: color("#202A25"),
+      main: color("#202A25"),
     },
     pink: {
       main: color("#F21B6A"),
@@ -24,6 +24,17 @@ const theme = {
     },
     white: {
       main: color("#FAFCFE"),
+    },
+    green: {
+      main: color("#25B900"),
+    },
+    categories: {
+      frontend: color("#F21B6A"),
+      backend: color("#25B900"),
+      mobile: color("#5F4BB6"),
+      fullstack: color("#0046FB"),
+      qa: color("#FF9900"),
+      devops: color("#48D1CC"),
     },
   },
 };
