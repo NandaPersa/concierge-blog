@@ -9,17 +9,31 @@ import {
   Resume,
 } from "./styles";
 
-const CardMoreViews: React.FC = () => {
+interface Props {
+  category: string;
+  title: string;
+  resume: string;
+  img: string;
+  colorCategory: string;
+  position: number;
+}
+
+const CardMoreViews = ({
+  img,
+  category,
+  title,
+  resume,
+  colorCategory,
+  position,
+}: Props): JSX.Element => {
   return (
     <Container>
-      <Image>
-        <Position>1ª</Position>
-        <img src=" " alt="" />
-      </Image>
+      <Position>{position}º</Position>
+      <Image src={img} alt="" />
       <Content>
-        <Category>Categoria</Category>
-        <Title>Meu titulo</Title>
-        <Resume>Um lindo resumo simplificado para o post.</Resume>
+        <Category color={colorCategory}>{category}</Category>
+        <Title>{title}</Title>
+        <Resume>{resume}</Resume>
       </Content>
     </Container>
   );
