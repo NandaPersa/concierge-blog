@@ -5,10 +5,21 @@ export const Container = styled.div`
 `;
 
 export const ContainerSlider = styled.div`
-  width: 650px;
-  margin-left: 62px;
+  width: 700px;
   margin-right: 0;
   display: flex;
-  align-items: center;
   justify-content: center;
+`;
+
+export const ContainerMoreViews = styled.div`
+  width: 500px;
+`;
+
+export const Content = styled.div`
+  width: 100%;
+  padding-left: 60px;
+  padding-right: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 `;
