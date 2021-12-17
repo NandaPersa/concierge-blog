@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import { getAuthors } from "../../services/RequestAuthors";
 import { Author } from "../../services/RequestAuthors/types";
 import CardAuthor from "./CardAuthor";
-import { Container } from "./styles";
+import { Container, ContentAuthor, Line, Title } from "./styles";
+import heart from "../../assets/heart.svg";
 
 const Authors = (): JSX.Element => {
   const [listAuthor, setListAuthors] = useState<Array<Author>>();
@@ -18,16 +19,27 @@ const Authors = (): JSX.Element => {
   }, []);
   return (
     <Container>
-      {listAuthor &&
-        listAuthor.map((item: Author) => (
-          <div key={item.id}>
-            <CardAuthor
-              name={item.name}
-              image={item.image}
-              occupation={item.ocupation}
-            />
-          </div>
-        ))}
+      <Title>Nossos editores</Title>
+      <Line />
+      <ContentAuthor>
+        {listAuthor &&
+          listAuthor.map((item: Author, idx) => (
+            <>
+              <div key={item.id}>
+                <CardAuthor
+                  name={item.name}
+                  image={item.image}
+                  occupation={item.ocupation}
+                />
+              </div>
+              {idx === 0 && (
+                <div>
+                  <img src={heart} alt="" />
+                </div>
+              )}
+            </>
+          ))}
+      </ContentAuthor>
     </Container>
   );
 };

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import "animate.css";
 
 export const Container = styled.div`
   width: 100%;
@@ -6,6 +7,12 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-bottom: 25px;
+
+  &:hover {
+    animation: pulse;
+    animation-duration: 2s;
+  }
 `;
 
 export const Image = styled.div`
@@ -14,6 +21,9 @@ export const Image = styled.div`
     height: 195px;
     border-radius: 100px;
     border: 2px solid ${({ theme }) => theme.palette.white.main.hex()};
+    -webkit-box-shadow: 4px 10px 53px -8px rgba(0, 0, 0, 0.45);
+    -moz-box-shadow: 4px 10px 53px -8px rgba(0, 0, 0, 0.45);
+    box-shadow: 4px 10px 53px -8px rgba(0, 0, 0, 0.45);
   }
 `;
 
@@ -30,6 +40,10 @@ export const Content = styled.div`
   position: absolute;
   z-index: 12;
   margin-top: 185px;
+
+  -webkit-box-shadow: 4px 10px 53px -8px rgba(0, 0, 0, 0.45);
+  -moz-box-shadow: 4px 10px 53px -8px rgba(0, 0, 0, 0.45);
+  box-shadow: 4px 10px 53px -8px rgba(0, 0, 0, 0.45);
 `;
 
 export const Name = styled.h1`
