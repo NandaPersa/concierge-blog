@@ -1,4 +1,5 @@
 import React from "react";
+import Authors from "../../components/Authors";
 import Carrossel from "../../components/Carrossel";
 import Header from "../../components/Header";
 import MoreViews from "../../components/MoreViews";
@@ -22,6 +23,7 @@ const Principal: React.FC = () => {
             <MoreViews />
           </ContainerMoreViews>
         </Content>
+        <Authors />
       </Container>
     </>
   );
