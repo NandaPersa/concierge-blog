@@ -7,6 +7,7 @@ export async function getAuthors(): Promise<Author> {
     const { data }: Author[] | any = await api.get(`/authors`);
 
     return data;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (error: any) {
     return error;
   }

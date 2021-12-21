@@ -9,6 +9,7 @@ const Authors = (): JSX.Element => {
   const [listAuthor, setListAuthors] = useState<Array<Author>>();
 
   const getListAuthors = async (): Promise<Author[]> => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const responseData: Author[] | any = await getAuthors();
     setListAuthors(responseData);
     return responseData;
@@ -24,9 +25,10 @@ const Authors = (): JSX.Element => {
       <ContentAuthor>
         {listAuthor &&
           listAuthor.map((item: Author, idx) => (
-            <>
+            <div key={item.id}>
               <div key={item.id}>
                 <CardAuthor
+                  key={item.id}
                   name={item.name}
                   image={item.image}
                   occupation={item.ocupation}
@@ -37,7 +39,7 @@ const Authors = (): JSX.Element => {
                   <img src={heart} alt="" />
                 </div>
               )}
-            </>
+            </div>
           ))}
       </ContentAuthor>
     </Container>
