@@ -8,7 +8,7 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 21px;
+  margin-bottom: 20px;
 
   img {
     margin-left: 24px;
