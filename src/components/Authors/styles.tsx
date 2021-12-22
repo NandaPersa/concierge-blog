@@ -17,10 +17,17 @@ export const Container = styled.div`
 `;
 
 export const ContentAuthor = styled.div`
+  margin-top: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 45px;
+  margin-top: 30px;
+
+  .styled {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 `;
 
 export const Title = styled.h1`

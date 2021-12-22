@@ -25,7 +25,7 @@ const Authors = (): JSX.Element => {
       <ContentAuthor>
         {listAuthor &&
           listAuthor.map((item: Author, idx) => (
-            <div key={item.id}>
+            <div key={item.id} className="styled">
               <div key={item.id}>
                 <CardAuthor
                   key={item.id}
