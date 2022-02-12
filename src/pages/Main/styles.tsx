@@ -23,3 +23,8 @@ export const Content = styled.div`
   justify-content: space-between;
   align-items: flex-start;
 `;
+
+export const ContentArticles = styled.div`
+  padding-left: 60px;
+  padding-right: 60px;
+`;

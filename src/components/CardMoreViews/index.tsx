@@ -29,7 +29,7 @@ const CardMoreViews = ({
   return (
     <Container>
       <Position>{position}º</Position>
-      <Image src={img} alt="" />
+      <Image borderColor={colorCategory} src={img} alt="" />
       <Content>
         <Category color={colorCategory}>{category}</Category>
         <Title>{title}</Title>

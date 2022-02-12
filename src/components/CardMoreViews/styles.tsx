@@ -7,11 +7,13 @@ export const Container = styled.div`
   align-items: center;
 `;
 
-export const Image = styled.img`
+export const Image = styled.img<{
+  borderColor: string;
+}>`
   width: 100px;
   height: 100px;
   border-radius: 100px;
-  border: 3px solid ${({ theme }) => theme.palette.pink.main.hex()};
+  border: 3px solid ${({ borderColor }) => borderColor};
   background-color: tomato;
   object-fit: cover;
 `;
