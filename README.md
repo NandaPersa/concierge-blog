@@ -1,3 +1,6 @@
+# Welcome to Concierge Blog
+[![Netlify Status](https://api.netlify.com/api/v1/badges/56f57a1f-eee0-457c-a06f-0b33bd47cb6c/deploy-status)](https://app.netlify.com/sites/concierge-blog/deploys)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
