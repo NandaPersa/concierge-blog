@@ -17,6 +17,12 @@ export const ContentCategory = styled.div`
   div {
     margin-left: 5px;
   }
+
+  @media (max-width: 580px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 5px;
+  }
 `;
 
 export const HeaderSection = styled.div`
@@ -39,4 +45,16 @@ export const Content = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   row-gap: 40px;
+
+  @media (max-width: 1000px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (max-width: 830px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 580px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 `;

@@ -4,11 +4,19 @@ export const Container = styled.div`
   width: 640px;
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 1000px) {
+    width: 100%;
+  }
 `;
 
 export const WrapperCarrossel = styled.div`
   width: 640px;
   height: 413px;
+
+  @media (max-width: 1000px) {
+    width: 100%;
+  }
 `;
 
 export const ContainerText = styled.div`

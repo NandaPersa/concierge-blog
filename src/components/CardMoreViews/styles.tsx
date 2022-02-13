@@ -34,25 +34,13 @@ export const Position = styled.div`
   color: ${({ theme }) => theme.palette.white.main.hex()};
 `;
 
+export const ContentCategory = styled.div`
+  width: 40%;
+`;
+
 export const Content = styled.div`
   width: 250px;
   margin-left: 20px;
-`;
-
-export const Category = styled.div<{
-  color: string;
-}>`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 80px;
-  height: 17px;
-  background-color: ${({ color }) => color || "pink"};
-  border-radius: 100px;
-  font-size: 12px;
-  font-family: ${({ theme }) => theme.fonts.familys.second};
-  color: ${({ theme }) => theme.palette.white.main.hex()};
-  text-transform: uppercase;
 `;
 
 export const Title = styled.h2`

@@ -9,10 +9,18 @@ export const ContainerSlider = styled.div`
   margin-right: 0;
   display: flex;
   justify-content: center;
+
+  @media (max-width: 1000px) {
+    width: 100%;
+  }
 `;
 
 export const ContainerMoreViews = styled.div`
   width: 500px;
+
+  @media (max-width: 1000px) {
+    width: 100%;
+  }
 `;
 
 export const Content = styled.div`
@@ -22,6 +30,10 @@ export const Content = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+
+  @media (max-width: 1000px) {
+    flex-direction: column;
+  }
 `;
 
 export const ContentArticles = styled.div`
