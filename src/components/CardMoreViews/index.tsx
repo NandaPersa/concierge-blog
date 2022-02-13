@@ -1,12 +1,13 @@
 import React from "react";
+import TagCategory from "../TagCategory";
 import {
   Container,
   Image,
   Position,
   Content,
-  Category,
   Title,
   Resume,
+  ContentCategory,
 } from "./styles";
 
 interface Props {
@@ -29,9 +30,11 @@ const CardMoreViews = ({
   return (
     <Container>
       <Position>{position}º</Position>
-      <Image src={img} alt="" />
+      <Image borderColor={colorCategory} src={img} alt="" />
       <Content>
-        <Category color={colorCategory}>{category}</Category>
+        <ContentCategory>
+          <TagCategory color={colorCategory} name={category} />
+        </ContentCategory>
         <Title>{title}</Title>
         <Resume>{resume}</Resume>
       </Content>

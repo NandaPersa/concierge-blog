@@ -15,6 +15,7 @@ const theme = {
     },
     titles: {
       main: color("#202A25"),
+      secundTitle: color("#3E3F44"),
     },
     pink: {
       main: color("#F21B6A"),
@@ -24,6 +25,9 @@ const theme = {
     },
     white: {
       main: color("#FAFCFE"),
+    },
+    gray: {
+      main: color("#C4C4C4"),
     },
     green: {
       main: color("#25B900"),

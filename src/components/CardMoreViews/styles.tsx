@@ -7,11 +7,13 @@ export const Container = styled.div`
   align-items: center;
 `;
 
-export const Image = styled.img`
+export const Image = styled.img<{
+  borderColor: string;
+}>`
   width: 100px;
   height: 100px;
   border-radius: 100px;
-  border: 3px solid ${({ theme }) => theme.palette.pink.main.hex()};
+  border: 3px solid ${({ borderColor }) => borderColor};
   background-color: tomato;
   object-fit: cover;
 `;
@@ -32,25 +34,13 @@ export const Position = styled.div`
   color: ${({ theme }) => theme.palette.white.main.hex()};
 `;
 
+export const ContentCategory = styled.div`
+  width: 40%;
+`;
+
 export const Content = styled.div`
   width: 250px;
   margin-left: 20px;
-`;
-
-export const Category = styled.div<{
-  color: string;
-}>`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 80px;
-  height: 17px;
-  background-color: ${({ color }) => color || "pink"};
-  border-radius: 100px;
-  font-size: 12px;
-  font-family: ${({ theme }) => theme.fonts.familys.second};
-  color: ${({ theme }) => theme.palette.white.main.hex()};
-  text-transform: uppercase;
 `;
 
 export const Title = styled.h2`

@@ -14,6 +14,11 @@ export const Container = styled.div`
     margin-left: 24px;
     margin-right: 24px;
   }
+
+  @media (max-width: 1000px) {
+    height: auto;
+    padding: 15px 0;
+  }
 `;
 
 export const ContentAuthor = styled.div`
@@ -28,6 +33,14 @@ export const ContentAuthor = styled.div`
     align-items: center;
     justify-content: center;
   }
+
+  @media (max-width: 1000px) {
+    flex-direction: column;
+
+    .styled {
+      flex-direction: column;
+    }
+  }
 `;
 
 export const Title = styled.h1`
@@ -40,4 +53,8 @@ export const Title = styled.h1`
 export const Line = styled.div`
   border-bottom: 2px solid ${({ theme }) => theme.palette.white.main.hex()};
   width: 600px;
+
+  @media (max-width: 1000px) {
+    width: 80%;
+  }
 `;
