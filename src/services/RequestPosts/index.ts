@@ -63,10 +63,10 @@ export async function getMoreViewsPosts(
   }
 }
 
-export async function getAllPosts(page = 1): Promise<RequestData> {
+export async function getAllPosts(): Promise<RequestData> {
   try {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const { data }: Post[] | any = await api.get(`posts/?page=${page}`);
+    const { data }: Post[] | any = await api.get(`posts/`);
 
     if (data.lenght === 0) {
       return {
