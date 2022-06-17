@@ -32,6 +32,7 @@ const theme = {
     green: {
       main: color("#25B900"),
     },
+
     categories: {
       frontend: color("#F21B6A"),
       backend: color("#25B900"),
