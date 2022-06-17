@@ -1,6 +1,7 @@
 import React from "react";
 import Authors from "../../components/Authors";
 import Carrossel from "../../components/Carrossel";
+import { Footer } from "../../components/Footer";
 import Header from "../../components/Header";
 import MoreViews from "../../components/MoreViews";
 import SectionAllArticles from "../../components/SectionAllArticles";
@@ -29,6 +30,8 @@ const Principal: React.FC = () => {
         <ContentArticles>
           <SectionAllArticles />
         </ContentArticles>
+
+        <Footer />
       </Container>
     </>
   );
