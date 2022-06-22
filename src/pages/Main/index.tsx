@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import Authors from "../../components/Authors";
 import Carrossel from "../../components/Carrossel";
 import { Footer } from "../../components/Footer";
-import Header from "../../components/Header";
 import MoreViews from "../../components/MoreViews";
 import PilotLoading from "../../components/PilotLoading";
 import SectionAllArticles from "../../components/SectionAllArticles";
@@ -16,7 +15,7 @@ import {
   ContentArticles,
 } from "./styles";
 
-const Principal: React.FC = () => {
+const Main: React.FC = () => {
   const { loading, setLoading } = usePilotLoading();
 
   useEffect(() => {
@@ -39,7 +38,6 @@ const Principal: React.FC = () => {
       </div>
       {!loading && (
         <Container>
-          <Header />
           <Content>
             <ContainerSlider>
               <Carrossel />
@@ -60,4 +58,4 @@ const Principal: React.FC = () => {
   );
 };
 
-export default Principal;
+export default Main;

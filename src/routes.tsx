@@ -1,14 +1,14 @@
 import React from "react";
-import { Route, BrowserRouter } from "react-router-dom";
+import { Route, Routes as RoutesRRD } from "react-router-dom";
 
-import Principal from "./pages/Main";
-import { Publication } from "./components/Publication";
+import Main from "./pages/Main";
+import { Publication } from "./pages/Publication";
 
-export const Routes = (): JSX.Element => {
+export const Routes: React.FC = () => {
   return (
-    <BrowserRouter>
-      <Route component={Principal} path="/" exact />
-      <Route component={Publication} path="/publication" />
-    </BrowserRouter>
+    <RoutesRRD>
+      <Route path="/" element={<Main />} />
+      <Route path="/post" element={<Publication />} />
+    </RoutesRRD>
   );
 };
