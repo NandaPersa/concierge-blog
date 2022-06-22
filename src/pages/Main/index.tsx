@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import Authors from "../../components/Authors";
 import Carrossel from "../../components/Carrossel";
 import { Footer } from "../../components/Footer";
-import Header from "../../components/Header";
 import MoreViews from "../../components/MoreViews";
 import SectionAllArticles from "../../components/SectionAllArticles";
 import {
@@ -14,21 +13,20 @@ import {
   ContentArticles,
 } from "./styles";
 
-const Principal: React.FC = () => {
+const Main: React.FC = () => {
   return (
     <>
-      <div>
-        <h1>Página Inicial</h1>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/publication">Publication</Link>
-            </li>
-          </ul>
-        </nav>
-      </div>
       <Container>
-        <Header />
+        <div>
+          <h1>Página Inicial</h1>
+          <nav>
+            <ul>
+              <li>
+                <Link to="/post">Publication</Link>
+              </li>
+            </ul>
+          </nav>
+        </div>
         <Content>
           <ContainerSlider>
             <Carrossel />
@@ -48,4 +46,4 @@ const Principal: React.FC = () => {
   );
 };
 
-export default Principal;
+export default Main;
