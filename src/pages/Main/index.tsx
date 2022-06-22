@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import Authors from "../../components/Authors";
 import Carrossel from "../../components/Carrossel";
 import { Footer } from "../../components/Footer";
@@ -26,6 +27,16 @@ const Principal: React.FC = () => {
 
   return (
     <>
+      <div>
+        <h1>Página Inicial</h1>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/publication">Publication</Link>
+            </li>
+          </ul>
+        </nav>
+      </div>
       {!loading && (
         <Container>
           <Header />
@@ -41,7 +52,6 @@ const Principal: React.FC = () => {
           <ContentArticles>
             <SectionAllArticles />
           </ContentArticles>
-
           <Footer />
         </Container>
       )}
