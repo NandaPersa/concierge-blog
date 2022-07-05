@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import { Link } from "react-router-dom";
 
 export const GlobalStyle = createGlobalStyle`
 * {
@@ -11,4 +12,5 @@ body {
   background-color: #F7FAFB;
   overflow-x: hidden;
 }
+
 `;

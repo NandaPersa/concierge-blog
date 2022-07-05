@@ -3,6 +3,7 @@ import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import { PilotLoadingProvider } from "./hooks/usePilotLoading";
 import Principal from "./pages/Main";
+import { Footer } from "./components/Footer";
 import Header from "./components/Header";
 import { Routes } from "./routes";
 import { GlobalStyle } from "./Styles/Global";
@@ -14,7 +15,9 @@ const App: React.FC = () => {
       <PilotLoadingProvider>
         <ThemeProvider theme={theme}>
           <GlobalStyle />
+          <Header />
           <Routes />
+          <Footer />
         </ThemeProvider>
       </PilotLoadingProvider>
     </BrowserRouter>

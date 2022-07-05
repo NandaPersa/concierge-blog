@@ -1,11 +1,17 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import "@brainhubeu/react-carousel/lib/style.css";
 import Carousel from "@brainhubeu/react-carousel";
 import { getNPost } from "../../services/RequestPosts";
 import { Post } from "../../services/RequestPosts/types";
 import CorroselImages from "../CorroselImages";
-import { Container, ContainerText, WrapperCarrossel } from "./styles";
 import { usePilotLoading } from "../../hooks/usePilotLoading";
+import {
+  Container,
+  ContainerText,
+  CustomLink,
+  WrapperCarrossel,
+} from "./styles";
 
 const Carrossel: React.FC = () => {
   const { loading, setLoading } = usePilotLoading();
@@ -42,34 +48,37 @@ const Carrossel: React.FC = () => {
 
   return (
     <>
-      <Container>
-        <WrapperCarrossel>
-          {posts && (
-            <>
-              <Carousel value={value}>
-                {posts &&
-                  posts.map((item: Post) => (
-                    <div key={item.id}>
-                      <CorroselImages
-                        img={item.image}
-                        alt={item.title}
-                        author={item.author.name}
-                        imageAuthor={item.author.image}
-                        category={item.categories[0].title}
-                        active={value}
-                        quantity={posts.length - 1}
-                      />
-                    </div>
-                  ))}
-              </Carousel>
-            </>
-          )}
-        </WrapperCarrossel>
-        <ContainerText>
-          <h1>{posts && posts[value].title}</h1>
-          <p>{posts && posts[value].resume}</p>
-        </ContainerText>
-      </Container>
+      <CustomLink to="/post">
+        <Container>
+          <WrapperCarrossel>
+            {posts && (
+              <>
+                <Carousel value={value}>
+                  {posts &&
+                    posts.map((item: Post) => (
+                      <div key={item.id}>
+                        <CorroselImages
+                          img={item.image}
+                          alt={item.title}
+                          author={item.author.name}
+                          imageAuthor={item.author.image}
+                          category={item.categories[0].title}
+                          active={value}
+                          quantity={posts.length - 1}
+                        />
+                      </div>
+                    ))}
+                </Carousel>
+              </>
+            )}
+          </WrapperCarrossel>
+
+          <ContainerText>
+            <h1>{posts && posts[value].title}</h1>
+            <p>{posts && posts[value].resume}</p>
+          </ContainerText>
+        </Container>
+      </CustomLink>
     </>
   );
 };
