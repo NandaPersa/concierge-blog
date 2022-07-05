@@ -17,16 +17,6 @@ const Main: React.FC = () => {
   return (
     <>
       <Container>
-        <div>
-          <h1>Página Inicial</h1>
-          <nav>
-            <ul>
-              <li>
-                <Link to="/post">Publication</Link>
-              </li>
-            </ul>
-          </nav>
-        </div>
         <Content>
           <ContainerSlider>
             <Carrossel />
@@ -39,8 +29,6 @@ const Main: React.FC = () => {
         <ContentArticles>
           <SectionAllArticles />
         </ContentArticles>
-
-        <Footer />
       </Container>
     </>
   );

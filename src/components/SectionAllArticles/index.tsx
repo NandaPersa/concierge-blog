@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { getCategories } from "../../services/RequestCategory";
 import { getAllPosts } from "../../services/RequestPosts";
 import { Category, Post, RequestData } from "../../services/RequestPosts/types";
@@ -8,11 +9,12 @@ import {
   Container,
   Content,
   ContentCategory,
+  CustomLink,
   Divider,
   HeaderSection,
 } from "./styles";
 
-const SectionAllArticles = (): JSX.Element => {
+const SectionAllArticles = (props: any): JSX.Element => {
   const [listCategories, setListCategories] = useState<Array<Category>>();
   const [articlesPerPage, setArticlesPerPage] = useState<Array<Post>>();
 
@@ -52,19 +54,21 @@ const SectionAllArticles = (): JSX.Element => {
           ))}
         </ContentCategory>
       </HeaderSection>
-      <Content>
-        {articlesPerPage &&
-          articlesPerPage?.map(article => (
-            <CardArticle
-              key={article.id}
-              img={article.image}
-              resume={article.resume}
-              title={article.title}
-              color={article.categories[0].color}
-              category={article.categories[0].title}
-            />
-          ))}
-      </Content>
+      <CustomLink to="/post">
+        <Content>
+          {articlesPerPage &&
+            articlesPerPage?.map(article => (
+              <CardArticle
+                key={article.id}
+                img={article.image}
+                resume={article.resume}
+                title={article.title}
+                color={article.categories[0].color}
+                category={article.categories[0].title}
+              />
+            ))}
+        </Content>
+      </CustomLink>
     </Container>
   );
 };

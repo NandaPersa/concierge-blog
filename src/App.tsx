@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
+import { Footer } from "./components/Footer";
 import Header from "./components/Header";
 import { Routes } from "./routes";
 import { GlobalStyle } from "./Styles/Global";
@@ -13,6 +14,7 @@ const App: React.FC = () => {
         <GlobalStyle />
         <Header />
         <Routes />
+        <Footer />
       </ThemeProvider>
     </BrowserRouter>
   );

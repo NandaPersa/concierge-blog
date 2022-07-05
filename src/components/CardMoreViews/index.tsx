@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import TagCategory from "../TagCategory";
 import {
   Container,
@@ -8,6 +9,7 @@ import {
   Title,
   Resume,
   ContentCategory,
+  CustomLink,
 } from "./styles";
 
 interface Props {
@@ -28,17 +30,20 @@ const CardMoreViews = ({
   position,
 }: Props): JSX.Element => {
   return (
-    <Container>
-      <Position>{position}º</Position>
-      <Image borderColor={colorCategory} src={img} alt="" />
-      <Content>
-        <ContentCategory>
-          <TagCategory color={colorCategory} name={category} />
-        </ContentCategory>
-        <Title>{title}</Title>
-        <Resume>{resume}</Resume>
-      </Content>
-    </Container>
+    // eslint-disable-next-line react/jsx-no-undef
+    <CustomLink to="/post">
+      <Container>
+        <Position>{position}º</Position>
+        <Image borderColor={colorCategory} src={img} alt="" />
+        <Content>
+          <ContentCategory>
+            <TagCategory color={colorCategory} name={category} />
+          </ContentCategory>
+          <Title>{title}</Title>
+          <Resume>{resume}</Resume>
+        </Content>
+      </Container>
+    </CustomLink>
   );
 };
 

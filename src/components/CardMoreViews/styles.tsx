@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -66,4 +67,9 @@ export const Resume = styled.p`
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+`;
+
+export const CustomLink = styled(Link)`
+  text-decoration: none;
+  color: ${({ theme }) => theme.palette.texts.main.hex()};
 `;

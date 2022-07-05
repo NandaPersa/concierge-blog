@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const Container = styled.div`
   width: 640px;
@@ -36,4 +37,8 @@ export const ContainerText = styled.div`
     color: ${({ theme }) => theme.palette.texts.main.hex()};
     font-weight: 400;
   }
+`;
+
+export const CustomLink = styled(Link)`
+  text-decoration: none;
 `;
