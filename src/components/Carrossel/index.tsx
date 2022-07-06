@@ -5,27 +5,30 @@ import { getNPost } from "../../services/RequestPosts";
 import { Post } from "../../services/RequestPosts/types";
 import CorroselImages from "../CorroselImages";
 import { Container, ContainerText, WrapperCarrossel } from "./styles";
+import { usePilotLoading } from "../../hooks/usePilotLoading";
 
 const Carrossel: React.FC = () => {
+  const { loading, setLoading } = usePilotLoading();
   const [posts, setPosts] = useState<Array<Post>>();
   const [value, setValue] = useState(0);
 
-  const getPostsCarrossel = async (): Promise<Post[]> => {
-    const responseData = await getNPost(5, "desc");
-    if (
-      responseData.success &&
-      responseData.posts &&
-      responseData.posts?.length > 0
-    ) {
-      setPosts(responseData.posts);
-      return responseData.posts;
-    }
-    return [];
-  };
-
   useEffect(() => {
+    const getPostsCarrossel = async (): Promise<Post[]> => {
+      const responseData = await getNPost(5, "desc");
+      if (
+        responseData.success &&
+        responseData.posts &&
+        responseData.posts?.length > 0
+      ) {
+        setPosts(responseData.posts);
+        return responseData.posts;
+      }
+      setLoading(true);
+      return [];
+    };
+
     getPostsCarrossel();
-  }, []);
+  }, [loading, setLoading]);
 
   useEffect(() => {
     if (posts) {

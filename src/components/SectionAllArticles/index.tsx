@@ -19,15 +19,20 @@ const SectionAllArticles = (): JSX.Element => {
   const getListCategories = async (): Promise<Category[]> => {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const responseData: Category[] | any = await getCategories();
-    setListCategories(responseData);
+    if (responseData.length > 0) {
+      setListCategories(responseData);
+    }
     return responseData;
   };
 
   const getArticlesPerPage = async (): Promise<RequestData[]> => {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const responseData: RequestData[] | any = await getAllPosts();
-    setArticlesPerPage(responseData.posts.posts);
-    return responseData.posts;
+    if (responseData?.posts?.posts?.length > 0) {
+      setArticlesPerPage(responseData.posts.posts);
+      return responseData.posts;
+    }
+    return [];
   };
 
   useEffect(() => {
@@ -41,15 +46,16 @@ const SectionAllArticles = (): JSX.Element => {
         <h1>Todos os artigos</h1>
         <Divider />
         <ContentCategory>
-          {listCategories?.map(category => (
-            <div key={category.id}>
-              <TagCategory
-                key={category.id}
-                color={category.color}
-                name={category.title}
-              />
-            </div>
-          ))}
+          {listCategories &&
+            listCategories?.map(category => (
+              <div key={category.id}>
+                <TagCategory
+                  key={category.id}
+                  color={category.color}
+                  name={category.title}
+                />
+              </div>
+            ))}
         </ContentCategory>
       </HeaderSection>
       <Content>
