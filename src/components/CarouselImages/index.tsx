@@ -11,7 +11,7 @@ interface Props {
   quantity: number;
 }
 
-const CorroselImages = ({
+const CarouselImages = ({
   img,
   alt,
   author,
@@ -39,4 +39,4 @@ const CorroselImages = ({
   );
 };
 
-export default CorroselImages;
+export default CarouselImages;

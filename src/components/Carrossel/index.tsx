@@ -1,14 +1,24 @@
 import React, { useEffect, useState } from "react";
-import "@brainhubeu/react-carousel/lib/style.css";
-import Carousel from "@brainhubeu/react-carousel";
+import Slider from "react-slick";
 import { getNPost } from "../../services/RequestPosts";
 import { Post } from "../../services/RequestPosts/types";
-import CorroselImages from "../CorroselImages";
+import CarouselImages from "../CarouselImages";
 import { Container, ContainerText, WrapperCarrossel } from "./styles";
 
 const Carrossel: React.FC = () => {
   const [posts, setPosts] = useState<Array<Post>>();
   const [value, setValue] = useState(0);
+
+  const sliderSettings = {
+    autoplay: true,
+    dots: false,
+    infinite: true,
+    fade: true,
+    speed: 2000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    beforeChange: (_: number, next: number) => setValue(next),
+  };
 
   const getPostsCarrossel = async (): Promise<Post[]> => {
     const responseData = await getNPost(5, "desc");
@@ -27,38 +37,28 @@ const Carrossel: React.FC = () => {
     getPostsCarrossel();
   }, []);
 
-  useEffect(() => {
-    if (posts) {
-      if (value > posts?.length - 2) {
-        setValue(0);
-      } else {
-        setTimeout(() => setValue(value + 1), 2000);
-      }
-    }
-  }, [value, posts]);
-
   return (
     <>
       <Container>
         <WrapperCarrossel>
           {posts && (
             <>
-              <Carousel value={value}>
+              <Slider {...sliderSettings}>
                 {posts &&
                   posts.map((item: Post) => (
                     <div key={item.id}>
-                      <CorroselImages
+                      <CarouselImages
                         img={item.image}
                         alt={item.title}
                         author={item.author.name}
                         imageAuthor={item.author.image}
                         category={item.categories[0].title}
                         active={value}
-                        quantity={posts.length - 1}
+                        quantity={posts.length}
                       />
                     </div>
                   ))}
-              </Carousel>
+              </Slider>
             </>
           )}
         </WrapperCarrossel>
