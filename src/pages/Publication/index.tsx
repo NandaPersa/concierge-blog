@@ -1,14 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Category } from "../../components/CorroselImages/styles";
 
-import ImgCategorias from "../../assets/categorias.png";
 import ImgMainPost from "../../assets/main-post.png";
 import Img5g from "../../assets/5g.png";
 
 import { PostContent } from "./styles";
-import { Container } from "../../components/TagCategory/styles";
-import { ContentCategory } from "../../components/SectionAllArticles/styles";
 import TagCategory from "../../components/TagCategory";
 
 export function Publication(): JSX.Element {
