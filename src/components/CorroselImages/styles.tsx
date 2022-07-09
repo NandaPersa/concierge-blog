@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -102,4 +103,8 @@ export const Circle = styled.div<{
   background-color: ${({ active, theme }) =>
     active ? theme.palette.pink.main.hex() : theme.palette.white.main.hex()};
   z-index: 15;
+`;
+
+export const CustomLink = styled(Link)`
+  text-decoration: none;
 `;

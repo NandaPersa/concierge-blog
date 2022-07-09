@@ -1,5 +1,14 @@
 import React from "react";
-import { Container, Image, Autor, Category, Marker, Circle } from "./styles";
+
+import {
+  Container,
+  Image,
+  Autor,
+  Category,
+  Marker,
+  Circle,
+  CustomLink,
+} from "./styles";
 
 interface Props {
   img: string;
@@ -27,15 +36,17 @@ const CorroselImages = ({
   }
 
   return (
-    <Container>
-      <Image borderColor={category} src={img} alt={alt} />
-      <Autor>
-        <p>{author}</p>
-        <img src={imageAuthor} alt="imagem autor" />
-      </Autor>
-      <Category colorBack={category}>{category}</Category>
-      <Marker>{circles}</Marker>
-    </Container>
+    <CustomLink to="/post">
+      <Container>
+        <Image borderColor={category} src={img} alt={alt} />
+        <Autor>
+          <p>{author}</p>
+          <img src={imageAuthor} alt="imagem autor" />
+        </Autor>
+        <Category colorBack={category}>{category}</Category>
+        <Marker>{circles}</Marker>
+      </Container>
+    </CustomLink>
   );
 };
 

@@ -8,6 +8,7 @@ import {
   Container,
   Content,
   ContentCategory,
+  CustomLink,
   Divider,
   HeaderSection,
 } from "./styles";
@@ -58,19 +59,21 @@ const SectionAllArticles = (): JSX.Element => {
             ))}
         </ContentCategory>
       </HeaderSection>
-      <Content>
-        {articlesPerPage &&
-          articlesPerPage?.map(article => (
-            <CardArticle
-              key={article.id}
-              img={article.image}
-              resume={article.resume}
-              title={article.title}
-              color={article.categories[0].color}
-              category={article.categories[0].title}
-            />
-          ))}
-      </Content>
+      <CustomLink to="/post">
+        <Content>
+          {articlesPerPage &&
+            articlesPerPage?.map(article => (
+              <CardArticle
+                key={article.id}
+                img={article.image}
+                resume={article.resume}
+                title={article.title}
+                color={article.categories[0].color}
+                category={article.categories[0].title}
+              />
+            ))}
+        </Content>
+      </CustomLink>
     </Container>
   );
 };

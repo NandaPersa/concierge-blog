@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const Container = styled.div``;
 
@@ -6,6 +7,10 @@ export const Divider = styled.div`
   width: 100%;
   border-bottom: 1px solid ${({ theme }) => theme.palette.gray.main.hex()};
   margin: 15px 0;
+
+  .linkPost {
+    text-decoration: none;
+  }
 `;
 
 export const ContentCategory = styled.div`
@@ -56,5 +61,9 @@ export const Content = styled.div`
 
   @media (max-width: 580px) {
     grid-template-columns: repeat(1, 1fr);
-  }
+  } ;
+`;
+
+export const CustomLink = styled(Link)`
+  text-decoration: none;
 `;
