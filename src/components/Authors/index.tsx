@@ -11,7 +11,9 @@ const Authors = (): JSX.Element => {
   const getListAuthors = async (): Promise<Author[]> => {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const responseData: Author[] | any = await getAuthors();
-    setListAuthors(responseData);
+    if (responseData.length > 0) {
+      setListAuthors(responseData);
+    }
     return responseData;
   };
 
