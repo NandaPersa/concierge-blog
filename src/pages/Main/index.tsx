@@ -1,8 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import Authors from "../../components/Authors";
 import Carrossel from "../../components/Carrossel";
-import { Footer } from "../../components/Footer";
 import MoreViews from "../../components/MoreViews";
 import SectionAllArticles from "../../components/SectionAllArticles";
 import {
