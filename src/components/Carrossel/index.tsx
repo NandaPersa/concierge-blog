@@ -5,6 +5,7 @@ import { getNPost } from "../../services/RequestPosts";
 import { Post } from "../../services/RequestPosts/types";
 import CorroselImages from "../CorroselImages";
 import { usePilotLoading } from "../../hooks/usePilotLoading";
+
 import {
   Container,
   ContainerText,
