@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Authors from "../../components/Authors";
 import Carrossel from "../../components/Carrossel";
-import { Footer } from "../../components/Footer";
 import MoreViews from "../../components/MoreViews";
 import PilotLoading from "../../components/PilotLoading";
 import SectionAllArticles from "../../components/SectionAllArticles";
@@ -50,7 +49,6 @@ const Main: React.FC = () => {
           <ContentArticles>
             <SectionAllArticles />
           </ContentArticles>
-          <Footer />
         </Container>
       )}
       {loading && <PilotLoading />}

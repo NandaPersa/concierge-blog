@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import "@brainhubeu/react-carousel/lib/style.css";
 import Carousel from "@brainhubeu/react-carousel";
 import { getNPost } from "../../services/RequestPosts";

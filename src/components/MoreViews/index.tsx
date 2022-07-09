@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import { getMoreViewsPosts } from "../../services/RequestPosts";
 import { Post } from "../../services/RequestPosts/types";
 import CardMoreViews from "../CardMoreViews";

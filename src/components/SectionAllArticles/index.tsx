@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import { getCategories } from "../../services/RequestCategory";
 import { getAllPosts } from "../../services/RequestPosts";
 import { Category, Post, RequestData } from "../../services/RequestPosts/types";
@@ -14,7 +13,7 @@ import {
   HeaderSection,
 } from "./styles";
 
-const SectionAllArticles = (props: any): JSX.Element => {
+const SectionAllArticles = (): JSX.Element => {
   const [listCategories, setListCategories] = useState<Array<Category>>();
   const [articlesPerPage, setArticlesPerPage] = useState<Array<Post>>();
 
