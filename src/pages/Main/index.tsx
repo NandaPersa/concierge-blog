@@ -25,16 +25,6 @@ const Main: React.FC = () => {
 
   return (
     <>
-      <div>
-        <h1>Página Inicial</h1>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/publication">Publication</Link>
-            </li>
-          </ul>
-        </nav>
-      </div>
       {!loading && (
         <Container>
           <Content>
