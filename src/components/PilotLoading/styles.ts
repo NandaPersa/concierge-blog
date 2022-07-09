@@ -15,6 +15,7 @@ const Container = styled.section`
     line-height: 40px;
     color: ${({ theme }) => theme.palette.pink.main.hex()};
     font-weight: 500;
+    text-align: center;
 
     span {
       font-weight: 700;
@@ -26,6 +27,13 @@ const Container = styled.section`
     line-height: 40px;
     font-size: 18px;
     margin-top: 20px;
+    text-align: center;
+  }
+
+  @media (max-width: 600px) {
+    p {
+      width: 90%;
+    }
   }
 `;
 
