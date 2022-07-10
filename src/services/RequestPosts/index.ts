@@ -90,3 +90,21 @@ export async function getAllPosts(page = 1): Promise<RequestData> {
     };
   }
 }
+
+export async function getPostById(id: number): Promise<RequestData> {
+  try {
+    const { data }: Post | any = await api.get(`posts/${id}`);
+
+    return {
+      message: "Post retornado com sucesso.",
+      success: true,
+      post: data,
+    };
+  } catch (error) {
+    return {
+      message: "Não foi possível retornas o post.",
+      success: false,
+      error,
+    };
+  }
+}
