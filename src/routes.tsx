@@ -8,7 +8,7 @@ export const Routes: React.FC = () => {
   return (
     <RoutesRRD>
       <Route path="/" element={<Main />} />
-      <Route path="/post" element={<Publication />} />
+      <Route path="/post/:id" element={<Publication />} />
     </RoutesRRD>
   );
 };

@@ -1,3 +1,5 @@
+import { type } from "os";
+
 /* eslint-disable camelcase */
 export type Category = {
   id: number;
@@ -13,6 +15,16 @@ export type Author = {
   image: string;
 };
 
+export type Comment = {
+  text: string;
+  name: string;
+  image: string;
+  token: string;
+  post: {
+    id: number;
+  };
+};
+
 export type Post = {
   id: number;
   title: string;
@@ -22,6 +34,9 @@ export type Post = {
   image: string;
   published_date: string;
   categories: Category[];
+  slug?: string;
+  views?: number;
+  comments?: Comment[];
 };
 
 export type RequestData = {
@@ -29,4 +44,5 @@ export type RequestData = {
   success?: boolean;
   posts?: Post[];
   error?: unknown | string;
+  post?: Post;
 };
