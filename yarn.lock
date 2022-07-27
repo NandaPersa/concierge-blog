@@ -2004,16 +2004,22 @@
     "@types/react" "*"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "@types/react-lottie@^1.2.6":
   version "1.2.6"
   resolved "https://registry.yarnpkg.com/@types/react-lottie/-/react-lottie-1.2.6.tgz#4f351dfdf5f93a46a3a9714fbb319f1e0f030eaf"
   integrity sha512-fvGJHD7SeUdVESHo7f7erRnXkTWaa/6Mo5TB+R0/ieSftKoFspA4sMlF2qMH6BljXI7ehFJbBtrD5bzDxPCkGg==
 =======
+=======
+>>>>>>> e92b9332151e3fcd581a31bb03340bd451dc2f7d
 "@types/react-slick@^0.23.10":
   version "0.23.10"
   resolved "https://registry.yarnpkg.com/@types/react-slick/-/react-slick-0.23.10.tgz#56126e6e4e95cdce7771535b2811c2c1931a7caa"
   integrity sha512-ZiqdencANDZy6sWOWJ54LDvebuXFEhDlHtXU9FFipQR2BcYU2QJxZhvJPW6YK7cocibUiNn+YvDTbt1HtCIBVA==
+<<<<<<< HEAD
 >>>>>>> feat: Add new lib for slides
+=======
+>>>>>>> e92b9332151e3fcd581a31bb03340bd451dc2f7d
   dependencies:
     "@types/react" "*"
 

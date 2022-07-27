@@ -2,15 +2,8 @@ import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import { getNPost } from "../../services/RequestPosts";
 import { Post } from "../../services/RequestPosts/types";
-import CorroselImages from "../CorroselImages";
 import { usePilotLoading } from "../../hooks/usePilotLoading";
 
-import {
-  Container,
-  ContainerText,
-  CustomLink,
-  WrapperCarrossel,
-} from "./styles";
 import CarouselImages from "../CarouselImages";
 import { Container, ContainerText, WrapperCarrossel } from "./styles";
 
@@ -28,19 +21,6 @@ const Carrossel: React.FC = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     beforeChange: (_: number, next: number) => setValue(next),
-  };
-
-  const getPostsCarrossel = async (): Promise<Post[]> => {
-    const responseData = await getNPost(5, "desc");
-    if (
-      responseData.success &&
-      responseData.posts &&
-      responseData.posts?.length > 0
-    ) {
-      setPosts(responseData.posts);
-      return responseData.posts;
-    }
-    return [];
   };
 
   useEffect(() => {
