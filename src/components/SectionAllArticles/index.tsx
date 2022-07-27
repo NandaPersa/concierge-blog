@@ -59,10 +59,10 @@ const SectionAllArticles = (): JSX.Element => {
             ))}
         </ContentCategory>
       </HeaderSection>
-      <CustomLink to="/post">
-        <Content>
-          {articlesPerPage &&
-            articlesPerPage?.map(article => (
+      <Content>
+        {articlesPerPage &&
+          articlesPerPage?.map(article => (
+            <CustomLink to={`/post/${article.id}`}>
               <CardArticle
                 key={article.id}
                 img={article.image}
@@ -70,10 +70,11 @@ const SectionAllArticles = (): JSX.Element => {
                 title={article.title}
                 color={article.categories[0].color}
                 category={article.categories[0].title}
+                id={article.id}
               />
-            ))}
-        </Content>
-      </CustomLink>
+            </CustomLink>
+          ))}
+      </Content>
     </Container>
   );
 };

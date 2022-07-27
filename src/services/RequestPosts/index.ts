@@ -102,7 +102,7 @@ export async function getPostById(id: number): Promise<RequestData> {
     };
   } catch (error) {
     return {
-      message: "Não foi possível retornas o post.",
+      message: "Não foi possível retornar o post.",
       success: false,
       error,
     };
