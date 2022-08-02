@@ -31,6 +31,7 @@ const MoreViews: React.FC = () => {
       {posts &&
         posts.map((item: Post, idx) => (
           <CardMoreViews
+            id={item.id}
             key={item.id}
             category={item.categories[0].title}
             title={item.title}

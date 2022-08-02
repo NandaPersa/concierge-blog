@@ -13,6 +13,7 @@ interface Props {
   resume: string;
   category: string;
   color: string;
+  id: number;
 }
 
 const CardArticle = ({
@@ -21,6 +22,7 @@ const CardArticle = ({
   resume,
   category,
   color,
+  id,
 }: Props): JSX.Element => {
   return (
     <Container>

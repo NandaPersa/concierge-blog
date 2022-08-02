@@ -18,6 +18,7 @@ interface Props {
   img: string;
   colorCategory: string;
   position: number;
+  id: number;
 }
 
 const CardMoreViews = ({
@@ -27,10 +28,11 @@ const CardMoreViews = ({
   resume,
   colorCategory,
   position,
+  id,
 }: Props): JSX.Element => {
   return (
     // eslint-disable-next-line react/jsx-no-undef
-    <CustomLink to="/post">
+    <CustomLink to={`/post/${id}`}>
       <Container>
         <Position>{position}º</Position>
         <Image borderColor={colorCategory} src={img} alt="" />
