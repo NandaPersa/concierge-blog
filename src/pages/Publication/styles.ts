@@ -121,3 +121,42 @@ export const PostContent = styled.div`
     }
   }
 `;
+
+export const SectionComments = styled.div`
+  width: 100%;
+  height: 686px;
+  background-color: ${({ theme }) => theme.palette.purple.main.hex()};
+  padding: 70px 120px;
+
+  .content {
+    overflow-y: scroll;
+    height: 400px;
+    width: 100%;
+  }
+`;
+
+export const AddNewComment = styled.div`
+  width: 100%;
+
+  p {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    color: ${({ theme }) => theme.palette.white.main.hex()};
+    font-family: ${({ theme }) => theme.fonts.familys.first};
+  }
+`;
+
+export const InputComment = styled.input`
+  width: 100%;
+  height: 52px;
+  border-radius: 12px;
+  border: none;
+  padding-left: 20px;
+
+  font-style: italic;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 18px;
+  font-family: ${({ theme }) => theme.fonts.familys.first};
+`;

@@ -4,8 +4,14 @@ import { Link } from "react-router-dom";
 import ImgMainPost from "../../assets/main-post.png";
 import Img5g from "../../assets/5g.png";
 
-import { PostContent } from "./styles";
+import {
+  AddNewComment,
+  InputComment,
+  PostContent,
+  SectionComments,
+} from "./styles";
 import TagCategory from "../../components/TagCategory";
+import CommentComponent from "../../components/CommentComponent/CommentComponent";
 
 export function Publication(): JSX.Element {
   return (
@@ -91,6 +97,23 @@ export function Publication(): JSX.Element {
           <button type="submit">Voltar inicio</button>
         </Link>
       </PostContent>
+      <SectionComments>
+        <div className="content">
+          <CommentComponent />
+          <CommentComponent />
+          <CommentComponent />
+          <CommentComponent />
+        </div>
+        <AddNewComment>
+          <p>DEIXE O SEU COMENTÁRIO</p>
+          <InputComment
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Digite aqui..."
+          />
+        </AddNewComment>
+      </SectionComments>
     </>
   );
 }
