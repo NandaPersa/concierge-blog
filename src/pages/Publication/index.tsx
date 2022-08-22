@@ -22,7 +22,7 @@ export function Publication(): JSX.Element {
       }
     };
     getPost();
-  });
+  }, [match?.id]);
 
   return (
     <>

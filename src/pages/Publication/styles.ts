@@ -3,13 +3,16 @@ import styled from "styled-components";
 export const PostContent = styled.div`
   margin: 0%;
   padding: 0%;
+  padding-left: 5%;
+  padding-right: 5%;
   display: grid;
   .title {
     font-size: 30px;
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
-    font-family: "poppins";
+    font-family: ${({ theme }) => theme.fonts.familys.first};
+    text-align: center;
   }
   .lineHorizontal {
     display: flex;
@@ -31,7 +34,7 @@ export const PostContent = styled.div`
   }
 
   .mainPost {
-    width: 70%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -44,7 +47,7 @@ export const PostContent = styled.div`
     font-size: 16px;
     margin-left: auto;
     margin-right: auto;
-    width: 70%;
+    width: 100%;
     margin-top: 50px;
     margin-bottom: 50px;
   }
@@ -222,7 +225,7 @@ export const PostContent = styled.div`
     margin-bottom: 3%;
     margin-top: 20px;
     margin-left: 0;
-  } 
+  }
 
   /* .textPost3 {
     margin: auto;
@@ -277,23 +280,27 @@ export const PostContent = styled.div`
       padding-left: 20px;
     }
     .contentPostsSimilar {
-      margin-left: 30%;
-      margin-right: 50%;
       grid-template-columns: repeat(1, 1fr);
-      background-color: red;
-      width: 60%;
+      width: 100%;
+
+      > div {
+        margin-left: auto;
+        margin-right: auto;
+      }
     }
 
     .titlePostSimilar {
       font-size: 20px;
       margin: auto;
     }
+
+    .textOne {
+      text-align: center;
+    }
   }
 
   @media (max-width: 680px) {
     .contentPostsSimilar {
-      margin-left: 30%;
-      margin-right: 50%;
       grid-template-columns: repeat(1, 1fr);
     }
 
@@ -309,8 +316,6 @@ export const PostContent = styled.div`
     }
 
     .contentPostsSimilar {
-      margin-left: 30%;
-      margin-right: 50%;
       grid-template-columns: repeat(1, 1fr);
     }
 
@@ -330,7 +335,7 @@ export const PostContent = styled.div`
     .titlePostSimilar {
       font-size: 20px;
       margin: auto;
-    } 
+    }
   } */
 
   /* @media (max-width: 580px) {
@@ -353,8 +358,6 @@ export const PostContent = styled.div`
     }
 
     .contentPostsSimilar {
-      margin-left: 20%;
-      margin-right: 50%;
       grid-template-columns: repeat(1, 1fr);
     }
 
@@ -366,8 +369,6 @@ export const PostContent = styled.div`
 
   @media (max-width: 380px) {
     .contentPostsSimilar {
-      margin-left: 10%;
-      margin-right: 50%;
       grid-template-columns: repeat(1, 1fr);
     }
 
