@@ -4,7 +4,7 @@ export const PostContent = styled.div`
   margin: 0%;
   padding: 0%;
   display: grid;
-  h1 {
+  .title {
     font-size: 30px;
     display: flex;
     justify-content: center;
@@ -95,7 +95,6 @@ export const PostContent = styled.div`
     justify-content: flex-start;
     height: 20px;
     margin-top: -10px;
-
     padding-left: 50px;
   }
 
@@ -107,17 +106,274 @@ export const PostContent = styled.div`
     padding-right: 10px;
   }
 
+  .contentPostsSimilar {
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    margin-bottom: 80px;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .titlePostSimilar {
+    font-size: 40px;
+    text-align: center;
+  }
+  /* .postSimilar1 {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+  }
+
+  .post1 {
+    background-color: #c4c4c4;
+    width: 120%;
+    height: 150px;
+    margin: auto;
+    border-radius: 15px;
+  }
+
+  .categoryPost1 {
+    width: 10%;
+    margin-left: 15%;
+    margin-top: -10px;
+  }
+  .categoryPost2 {
+    width: 10%;
+    margin-left: 15%;
+    margin-top: -10px;
+  }
+
+  .categoryPost3 {
+    width: 10%;
+    margin-left: 15%;
+    margin-top: -10px;
+  }
+
+  .categoryPost4 {
+    width: 10%;
+    margin-left: 15%;
+    margin-top: -10px;
+  }
+
+  .titlePost1 {
+    font-size: 24px;
+    margin-bottom: 3%;
+    margin-top: 20px;
+    margin-left: 0;
+  }
+
+  .textPost1 .textPost2 .textPost3 .textPost4 {
+    margin: auto;
+    color: #c4c4c4;
+    font-size: 14px;
+  }
+
+  .postSimilar2 {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+  }
+
+  .post2 {
+    background-color: #c4c4c4;
+    width: 120%;
+    height: 150px;
+    margin: auto;
+    border-radius: 15px;
+  }
+
+  .titlePost2 {
+    margin: auto;
+    font-size: 24px;
+    color: ${({ theme }) => theme.palette.titles.main.hex()};
+    font-family: ${({ theme }) => theme.fonts.familys.first};
+    margin-bottom: 3%;
+    margin-top: 20px;
+    margin-left: 0;
+  }
+
+  /* .textPost2 {
+    margin: auto;
+    color: #c4c4c4;
+    color: ${({ theme }) => theme.palette.texts.main.hex()};
+    font-family: ${({ theme }) => theme.fonts.familys.first};
+    font-size: 14px;
+  } */
+
+  /* .postSimilar3 {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+  }
+
+  .post3 {
+    background-color: #c4c4c4;
+    width: 120%;
+    height: 150px;
+    margin: auto;
+    border-radius: 15px;
+  }
+
+ .titlePost3 {
+    margin: auto;
+    font-size: 24px;
+    margin-bottom: 3%;
+    margin-top: 20px;
+    margin-left: 0;
+  } 
+
+  /* .textPost3 {
+    margin: auto;
+    color: #c4c4c4;
+    color: ${({ theme }) => theme.palette.texts.main.hex()};
+    font-family: ${({ theme }) => theme.fonts.familys.first};
+    font-size: 14px;
+  } */
+
+  /* .postSimilar4 {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+  } */
+
+  /* .post4 {
+    background-color: #c4c4c4;
+    width: 120%;
+    height: 150px;
+    margin: auto;
+    border-radius: 15px;
+  } */
+
+  /* .titlePost4 {
+    margin: auto;
+    font-size: 24px;
+    color: ${({ theme }) => theme.palette.titles.main.hex()};
+    font-family: ${({ theme }) => theme.fonts.familys.first};
+    margin-bottom: 3%;
+    margin-top: 20px;
+    margin-left: 0;
+  } */
+
+  /* .textPost4 {
+    margin: auto;
+    color: #c4c4c4;
+    color: ${({ theme }) => theme.palette.texts.main.hex()};
+    font-family: ${({ theme }) => theme.fonts.familys.first};
+    font-size: 14px;
+  } */
+
+  @media (max-width: 1005px) {
+    .contentPostsSimilar {
+      margin: auto;
+      align-items: center;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
   @media (max-width: 780px) {
-    .textOne,
-    .textTwo,
-    .post5g,
-    .mainPost {
-      width: 80%;
+    .category {
+      padding-left: 20px;
+    }
+    .contentPostsSimilar {
+      margin-left: 30%;
+      margin-right: 50%;
+      grid-template-columns: repeat(1, 1fr);
+      background-color: red;
+      width: 60%;
     }
 
+    .titlePostSimilar {
+      font-size: 20px;
+      margin: auto;
+    }
+  }
+
+  @media (max-width: 680px) {
+    .contentPostsSimilar {
+      margin-left: 30%;
+      margin-right: 50%;
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    .titlePostSimilar {
+      font-size: 20px;
+      margin: auto;
+    }
+  }
+
+  @media (max-width: 580px) {
     .category {
-      justify-content: center;
-      padding-left: 0;
+      padding-left: 10%;
+    }
+
+    .contentPostsSimilar {
+      margin-left: 30%;
+      margin-right: 50%;
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    .titlePostSimilar {
+      font-size: 20px;
+      margin: auto;
+    }
+  }
+
+  /* /* @media (max-width: 680px) {
+    .contentPostsSimilar {
+      margin-left: 30%;
+      margin-right: 50%;
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    .titlePostSimilar {
+      font-size: 20px;
+      margin: auto;
+    } 
+  } */
+
+  /* @media (max-width: 580px) {
+    .contentPostsSimilar {
+      margin-left: 25%;
+      margin-right: 50%;
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    .titlePostSimilar {
+      font-size: 20px;
+      margin: auto;
+    }
+  } */
+
+  @media (max-width: 480px) {
+    .category {
+      width: 20%;
+      padding-left: 5%;
+    }
+
+    .contentPostsSimilar {
+      margin-left: 20%;
+      margin-right: 50%;
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    .titlePostSimilar {
+      font-size: 20px;
+      margin: auto;
+    }
+  }
+
+  @media (max-width: 380px) {
+    .contentPostsSimilar {
+      margin-left: 10%;
+      margin-right: 50%;
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    .titlePostSimilar {
+      font-size: 20px;
+      margin: auto;
     }
   }
 `;

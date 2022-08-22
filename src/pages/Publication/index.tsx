@@ -1,11 +1,12 @@
 /* eslint-disable no-console */
+/* eslint-disable react/no-danger */
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Post } from "../../services/RequestPosts/types";
-
 import { PostContent } from "./styles";
 import TagCategory from "../../components/TagCategory";
 import { getPostById } from "../../services/RequestPosts";
+import CardArticle from "../../components/CardArticle";
 
 export function Publication(): JSX.Element {
   const [informationPost, setInformationPost] = useState<Post>();
@@ -26,7 +27,7 @@ export function Publication(): JSX.Element {
   return (
     <>
       <PostContent>
-        <h1>{informationPost?.title}</h1>
+        <h1 className="title">{informationPost?.title}</h1>
 
         <div className="lineHorizontal" />
         <div className="mainPost">
@@ -70,8 +71,46 @@ export function Publication(): JSX.Element {
         />
 
         <div className="postSimilar">
-          <h1>Mais posts Similares</h1>
+          <h1 className="titlePostSimilar">Mais posts Similares</h1>
           <div className="lineHorizontal" />
+        </div>
+
+        <div className="contentPostsSimilar">
+          <CardArticle
+            key={1}
+            img="https://blog.lg.com.br/wp-content/uploads/2019/11/tecnologia-e-ser-humano-1.png"
+            resume="Esse é um resumo"
+            title="Esse é o título"
+            color="#F21B6A"
+            category="Front-end"
+          />
+
+          <CardArticle
+            key={1}
+            img="https://blog.lg.com.br/wp-content/uploads/2019/11/tecnologia-e-ser-humano-1.png"
+            resume="Esse é um resumo"
+            title="Esse é o título"
+            color="#F21B6A"
+            category="Front-end"
+          />
+
+          <CardArticle
+            key={1}
+            img="https://blog.lg.com.br/wp-content/uploads/2019/11/tecnologia-e-ser-humano-1.png"
+            resume="Esse é um resumo"
+            title="Esse é o título"
+            color="#F21B6A"
+            category="Front-end"
+          />
+
+          <CardArticle
+            key={1}
+            img="https://blog.lg.com.br/wp-content/uploads/2019/11/tecnologia-e-ser-humano-1.png"
+            resume="Esse é um resumo"
+            title="Esse é o título"
+            color="#F21B6A"
+            category="Front-end"
+          />
         </div>
 
         <Link to="/" className="return">

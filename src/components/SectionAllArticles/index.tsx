@@ -70,7 +70,6 @@ const SectionAllArticles = (): JSX.Element => {
                 title={article.title}
                 color={article.categories[0].color}
                 category={article.categories[0].title}
-                id={article.id}
               />
             </CustomLink>
           ))}

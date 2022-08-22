@@ -56,17 +56,19 @@ const Carrossel: React.FC = () => {
                 <Carousel value={value}>
                   {posts &&
                     posts.map((item: Post) => (
-                      <div key={item.id}>
-                        <CorroselImages
-                          img={item.image}
-                          alt={item.title}
-                          author={item.author.name}
-                          imageAuthor={item.author.image}
-                          category={item.categories[0].title}
-                          active={value}
-                          quantity={posts.length - 1}
-                        />
-                      </div>
+                      <CustomLink to={`/post/${item.id}`}>
+                        <div key={item.id}>
+                          <CorroselImages
+                            img={item.image}
+                            alt={item.title}
+                            author={item.author.name}
+                            imageAuthor={item.author.image}
+                            category={item.categories[0].title}
+                            active={value}
+                            quantity={posts.length - 1}
+                          />
+                        </div>
+                      </CustomLink>
                     ))}
                 </Carousel>
               </>
