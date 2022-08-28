@@ -132,11 +132,22 @@ export const SectionComments = styled.div`
     overflow-y: scroll;
     height: 400px;
     width: 100%;
+    padding-right: 7px;
+    ::-webkit-scrollbar {
+      margin-left: 15px;
+      width: 6px;
+      border-radius: 12px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #dad7d7;
+      border-radius: 50px;
+    }
   }
 `;
 
 export const AddNewComment = styled.div`
   width: 100%;
+  margin-top: 50px;
 
   p {
     font-weight: 600;

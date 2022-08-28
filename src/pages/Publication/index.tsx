@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-
+import Modal from "react-modal";
 import ImgMainPost from "../../assets/main-post.png";
 import Img5g from "../../assets/5g.png";
 
@@ -12,8 +12,29 @@ import {
 } from "./styles";
 import TagCategory from "../../components/TagCategory";
 import CommentComponent from "../../components/CommentComponent/CommentComponent";
+import LoginSocialModal from "../../components/LoginSocialModal";
+
+const customStyles = {
+  content: {
+    width: "35%",
+    height: "55%",
+    background: "#ffffff",
+    borderRadius: "15px",
+    top: "50%",
+    left: "50%",
+    right: "auto",
+    bottom: "auto",
+    marginRight: "-50%",
+    transform: "translate(-50%, -50%)",
+  },
+  overlay: {
+    backgroundColor: "rgba(3, 3, 3, 0.75)",
+  },
+};
 
 export function Publication(): JSX.Element {
+  const [modalIsOpen, setIsOpen] = useState(false);
+
   return (
     <>
       <PostContent>
@@ -111,9 +132,18 @@ export function Publication(): JSX.Element {
             id="name"
             name="name"
             placeholder="Digite aqui..."
+            onChange={() => setIsOpen(true)}
           />
         </AddNewComment>
       </SectionComments>
+      <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={() => setIsOpen(false)}
+        contentLabel="Example Modal"
+        style={customStyles}
+      >
+        <LoginSocialModal />
+      </Modal>
     </>
   );
 }
