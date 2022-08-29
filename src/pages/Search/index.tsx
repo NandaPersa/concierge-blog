@@ -6,7 +6,7 @@ import { Post } from "../../services/RequestPosts/types";
 
 import Styled from "./styles";
 
-const Search: React.FC = () => {
+const Search = (): JSX.Element => {
   const match = useParams();
   const [posts, setPosts] = useState<Post[]>([]);
 
@@ -24,6 +24,9 @@ const Search: React.FC = () => {
 
   return (
     <Styled.Container>
+      <p>
+        Pesquisando por: <span>{match?.term}</span>{" "}
+      </p>
       <Styled.Content>
         {posts.length > 0 &&
           posts?.map(post => (
@@ -36,6 +39,9 @@ const Search: React.FC = () => {
               category={post.categories[0].title}
             />
           ))}
+        {(!posts || posts.length === 0) && (
+          <h2>Desculpe, não encontramos resultados para essa pesquisa.</h2>
+        )}
       </Styled.Content>
     </Styled.Container>
   );

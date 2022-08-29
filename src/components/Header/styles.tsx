@@ -39,6 +39,16 @@ export const SearchContainer = styled.form`
     height: 34px;
     width: 190px;
     border: none;
+
+    &:focus {
+      outline: none;
+      background-color: transparent;
+    }
+  }
+
+  button {
+    background-color: transparent;
+    border: none;
   }
 
   @media screen and (max-width: 600px) {
