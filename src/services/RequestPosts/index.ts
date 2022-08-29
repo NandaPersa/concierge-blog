@@ -90,3 +90,31 @@ export async function getAllPosts(page = 1): Promise<RequestData> {
     };
   }
 }
+
+export async function searchPosts(term: string): Promise<RequestData> {
+  try {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const { data }: Post[] | any = await api.get(`posts/search/?term=${term}`);
+
+    if (data.lenght === 0) {
+      return {
+        message: "Não foi possível listar os posts.",
+        success: false,
+        error: data?.error,
+        posts: [],
+      };
+    }
+
+    return {
+      message: "Posts retornados com sucesso.",
+      success: true,
+      posts: data?.posts,
+    };
+  } catch (error) {
+    return {
+      message: "Não foi possível retornar os posts.",
+      success: false,
+      error,
+    };
+  }
+}

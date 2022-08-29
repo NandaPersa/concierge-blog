@@ -22,7 +22,7 @@ export const LogoContainer = styled.img`
   width: 200px;
 `;
 
-export const SearchContainer = styled.div`
+export const SearchContainer = styled.form`
   background-color: ${({ theme }) => theme.palette.white.main.hex()};
   border: solid 1px ${({ theme }) => theme.palette.purple.main.hex()};
   border-radius: 20px;
@@ -39,6 +39,17 @@ export const SearchContainer = styled.div`
     height: 34px;
     width: 190px;
     border: none;
+
+    &:focus {
+      outline: none;
+      background-color: transparent;
+    }
+  }
+
+  button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
   }
 
   @media screen and (max-width: 600px) {
