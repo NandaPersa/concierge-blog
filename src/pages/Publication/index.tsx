@@ -98,7 +98,7 @@ export function Publication(): JSX.Element {
             key={1}
             img="https://blog.lg.com.br/wp-content/uploads/2019/11/tecnologia-e-ser-humano-1.png"
             resume="Esse é um resumo"
-            title="Esse é o título"
+            title="Esse é o título1"
             color="#F21B6A"
             category="Front-end"
           />
